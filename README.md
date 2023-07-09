@@ -8,7 +8,7 @@ CANgage displays CAN data in real-time on a mini display, meant to be placed nea
 
 - **CANserver**: A device that connects to a vehicle's canbus and sends decoded data over wifi.
     - More about CANserver: http://www.jwardell.com/canserver
-    - Firmware 2.2-dev.2 or above is required on the CANserver to support UDP communication
+    - Firmware 2.2 is required on the CANserver to support UDP communication. To receive this version you will have to switch your CANserver Release Channel to Development and then have it check for updates to install the latest version.
 - **Display Module**: Many ESP32-based display modules can be supported, firmware currently available for:
     - LilyGo T-Display-S3 AMOLED: https://www.lilygo.cc/products/t-display-s3-amoled
 	
