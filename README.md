@@ -71,12 +71,16 @@ CANgage allows you to use a variety of built-in font sizes, or upload your own u
 
 #### Generating Custom Fonts
 
-The file format used by CANgage for custom fonts is the [LVGL binary bitmap font format](https://github.com/lvgl/lv_font_conv/blob/master/doc/font_spec.md). These files can be generated using common font files like TTF and WOFF with one of the following converters. For CANgage, it's recommended to generate fonts at 2 BPP (bits per pixel) which will help keep the file sizes low and will generally look just as good as higher settings on the small screens typically used. Turning off the compression option will also increasd the speed at which text can be rendered. These converters also require a character range to be specified, generally what works best is 0x20 - 0x7E, since this is the standard ASCII range.
+The file format used by CANgage for custom fonts is the [LVGL binary bitmap font format](https://github.com/lvgl/lv_font_conv/blob/master/doc/font_spec.md). These files can be generated using common font files like TTF and WOFF with one of the following converters. For CANgage, it's recommended to generate fonts at 2 BPP (bits per pixel) which will help keep the file sizes small and will generally look just as good as higher settings on the small screens typically used. It's also recommended to turn off the compression option because compression will slow down text rendering. These converters require a character range to be specified, generally what works best is 0x20 - 0x7E, since this is the standard ASCII range. If you use any symbols outside this range, like the degrees symbol for example, you have to include the character codes for those as well.
 
 - **openHASP Online Font Converter**: https://www.openhasp.com/0.6.3/design/fonts/#binary
     - The easiest way to convert fonts. Font settings can be adjusted and TTF, OTF or WOFF files uploaded, at which point the binary file will be generated and downloaded.
 - **lv_font_conv**: https://github.com/lvgl/lv_font_conv
     - Locally installed font converter that runs on the command line, requires node.js.
+ 
+Here are some resources for downloading free fonts online:
+- **Google Fonts**: https://fonts.google.com
+- **DaFont**: https://www.dafont.com
 
 ### Global Elements
 
